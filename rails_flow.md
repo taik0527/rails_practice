@@ -22,7 +22,7 @@
 * コントローラがHTTPレスポンスを作成し、Webサーバを介してクライアントへと返され、その中に含まれるHTMLをWebブラウザが解釈して新規作成ページが表示される。
 
 #### タスク名を入力し、作成ボタンを押して一覧画面に遷移するまでの流れ
-* タスク名を入力して作成ボタンを押すと、Webブラウザから`/tasks`というURLで`POST`メソッドのHTTPリクエストが送られる。開発者ツールで見てみると、URLが`/tasks`、Request Methodが`POST`のリクエストが送られていることが分かる。
+* タスク名を入力して作成ボタンを押すと、Webブラウザから`/tasks`というURLで`POST`メソッドのHTTPリクエストが送られる。開発者ツールで見てみると、URLが`/tasks`、Request Methodが`POST`のリクエストが送られていることが分かる。Status Codeの302はリダイレクトを意味している。
 [![Image from Gyazo](https://i.gyazo.com/a41a98410854c847aa0a75c1b2db6560.png)](https://gyazo.com/a41a98410854c847aa0a75c1b2db6560)
 * HTTPリクエストがWebサーバーを介してRailsアプリケーションへ受け渡される。
 * `routes.rb`に記述されているルーティングに沿って、tasksコントローラのcreateアクションが呼び出される。
