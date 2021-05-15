@@ -26,7 +26,7 @@
 [![Image from Gyazo](https://i.gyazo.com/a41a98410854c847aa0a75c1b2db6560.png)](https://gyazo.com/a41a98410854c847aa0a75c1b2db6560)
 * HTTPリクエストがWebサーバーを介してRailsアプリケーションへ受け渡される。
 * `routes.rb`に記述されているルーティングに沿って、tasksコントローラのcreateアクションが呼び出される。
-* createアクション内では、`form_with`メソッドからリクエストパラメータとして送られてきた情報の中から、`params`を用いて名称(name)と詳しい説明(description)の情報だけが抜き取られ、変数taskに格納された後にデータベースに保存される。開発者ツールのForm Dataを見てみると、`task[name]:会議`、`task[description]:パソコンを持っていく`という情報が渡されていることが分かる。
+* createアクション内では、フォームからリクエストパラメータとして送られてきた情報の中から、`params`を用いて名称(name)と詳しい説明(description)の情報だけが抜き取られ、変数taskに格納された後にデータベースに保存される。開発者ツールのForm Dataを見てみると、`task[name]:会議`、`task[description]:パソコンを持っていく`という情報が渡されていることが分かる。
 [![Image from Gyazo](https://i.gyazo.com/71444e012b32e916393c65a047c07ddb.png)](https://gyazo.com/71444e012b32e916393c65a047c07ddb)
 * この時モデルはコントローラからの命令を元にSQLを発行してレコード操作を行う。今回は変数`task`内の情報をデータベースのtasksテーブルに保存するSQLが実行される。
 * その後`redirect_to`メソッドで２つ目のリクエストが発生し、`/tasks`というURLで`GET`メソッドのHTTPリクエストが送られる。開発者ツールで見てみると、URLが`/tasks`、Request Methodが`GET`のリクエストが送られていることが分かる。
