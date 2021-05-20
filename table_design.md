@@ -11,8 +11,9 @@
   * title: string
   * body: text
   * created_at: datetime
-  * updated_at: timestamp
+  * updated_at: datetime
   * question_id: int
+  * solved: boolean
 
 * Answers
   * description: text
