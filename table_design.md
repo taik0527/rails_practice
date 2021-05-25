@@ -3,8 +3,7 @@
   * email: string
   * image: string
   * password_digest: string
-  * password_confirmation: string
-  * user_id: int
+  * id: int
   * admin: boolean
 
 * Questions
@@ -12,10 +11,13 @@
   * body: text
   * created_at: datetime
   * updated_at: datetime
-  * question_id: int
+  * id: int
   * solved: boolean
+  * user_id: int
 
 * Answers
-  * description: text
+  * body: text
   * created_at: datetime
-  * updated_at: timestamp
+  * updated_at: datetime
+  * user_id: int
+  * question_id: int
