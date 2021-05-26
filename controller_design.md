@@ -15,6 +15,7 @@
 | 回答する | POST | /answers/:id | answers#create |
 | ユーザー一覧を表示する | GET | /users | users#index |
 | 管理画面用のログインページを表示する | GET | /admin/login/new | sessions#new |
+| （管理画面）質問一覧ページを表示する | GET | /admin/questions | questions#index |
 | （管理画面）質問を削除する | DELETE | /admin/questions/:id | questions#destroy |
 | （管理画面）ユーザー一覧ページを表示する | GET | /admin/users | users#index |
 | （管理画面）ユーザーを削除する | DELETE | /admin/users/:id | users#destroy |
