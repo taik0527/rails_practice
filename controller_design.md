@@ -9,13 +9,13 @@
 | 質問一覧を表示する（解決済み） | GET | /questions/solved | questions#solved |
 | 質問投稿ページを表示する | GET | /questions/new | questions#new |
 | 質問投稿をする | POST | /questions | questions#create |
-| 質問詳細を表示する | GET | /questions/:id | questions#show |
-| 質問編集ページを表示する | GET| /questions/:id/edit | questions#edit |
-| 質問を削除する | DELETE | /questions/:id | questions#destroy |
-| 回答する | POST | /answers/:id | answers#create |
+| 質問詳細を表示する | GET | /questions/:question_id | questions#show |
+| 質問編集ページを表示する | GET| /questions/:question_id/edit | questions#edit |
+| 質問を削除する | DELETE | /questions/:question_id | questions#destroy |
+| 回答する | POST | /questions/:question_id /answers | answers#create |
 | ユーザー一覧を表示する | GET | /users | users#index |
-| 管理画面用のログインページを表示する | GET | /admin/login/new | sessions#new |
+| 管理画面用のログインページを表示する | GET | /admin/login | sessions#new |
 | （管理画面）質問一覧ページを表示する | GET | /admin/questions | questions#index |
-| （管理画面）質問を削除する | DELETE | /admin/questions/:id | questions#destroy |
+| （管理画面）質問を削除する | DELETE | /admin/questions/:question_id | questions#destroy |
 | （管理画面）ユーザー一覧ページを表示する | GET | /admin/users | users#index |
 | （管理画面）ユーザーを削除する | DELETE | /admin/users/:id | users#destroy |
