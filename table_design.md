@@ -3,21 +3,15 @@
   * email: string
   * image: string
   * password_digest: string
-  * id: int
   * admin: boolean
 
 * Questions
   * title: string
   * body: text
-  * created_at: datetime
-  * updated_at: datetime
-  * id: int
   * solved: boolean
-  * user_id: int
+  * user_id: bigint
 
 * Answers
   * body: text
-  * created_at: datetime
-  * updated_at: datetime
-  * user_id: int
-  * question_id: int
+  * user_id: bigint
+  * question_id: bigint
